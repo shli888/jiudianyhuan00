@@ -6,6 +6,14 @@ on:
   workflow_dispatch:
 
 jobs:
+  your-job-name:
+    runs-on: ubuntu-latest
+    # 添加下面这两行来授予代码内容的写权限
+    permissions:
+      contents: write 
+    steps:
+      - uses: actions/checkout@v3
+      # ... 剩下的构建和推送步骤 ...
   run-itvlist:
     runs-on: ubuntu-latest
 
